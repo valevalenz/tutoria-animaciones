@@ -1,0 +1,71 @@
+
+
+/* 1 Ejemplo Transición */
+
+/* Aquí aplicamos transicón a background color, pero podemos hacer transiciones con otras propiedades como width, height, opacity, entre otras.  tamaño de una fuente, al tipo de fuente, bordes, margins,
+paddings, cualquier otra propiedad típica de CSS.  */
+
+.basico{
+    background-color:#0077ff;
+    color:white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border:none;
+    border-radius:5px;
+    transition: background-color 1s ease;
+    /* probemos linear ease ease-in ease-out */
+}
+
+.basico:hover{
+    background-color: rgb(255,140,0);
+}
+
+
+/* Ej 2 transiciones filter */
+.escaladegrises {
+    filter: grayscale(100%); /* Convierte la imagen en blanco y negro */
+    transition: filter 0.5s ease; /* Añade una transición suave */
+}
+
+.escaladegrises:hover {
+    filter: grayscale(0%); /* Vuelve a mostrar la imagen en color al hacer hover */
+}
+
+
+/* Ej 3 transiciones en el ancho */
+
+.ancho{
+  
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: width 1s;
+}
+
+.ancho:hover {
+width: 200px;
+background-color: red;
+}
+
+
+/* Ejemplo transiciones 4: Se puede aplicar a todas las propiedades simultáneamente  */
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: all 1s steps(5);
+
+    /* Cambiemos 1s por 3s y
+observemos la diferencia */
+/* 
+agreguemos steps(5) después de 1s y veamos qué ocurre. Por defecto los pasos ocurren al final (tienen una breve espera) de cada paso, si queremos que ocurra al inicio debemos agregar steps(5,start) */
+    }
+
+    .box:hover {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+   }
+
+

@@ -1,0 +1,99 @@
+/* animaciones más avanzadas y
+personalizadas mediante la definición de
+keyframes.
+● Los keyframes permiten definir los
+valores intermedios de una animación en
+diferentes momentos durante su
+duración. : Son los momentos claves de la animación */
+
+.box {
+    width: 100px;
+    height: 100px;
+    /* 1. asignar un nombre */
+    animation-name: colorear;
+    /* 2. luego definir cuántas veces se repetirá */
+    animation-iteration-count:infinite;
+    /* 3. finalmente definir cuánto durará */
+    animation-duration: 2s;
+    /* Se aplica la animación
+   "colorear" a la caja */
+   }
+
+
+   @keyframes colorear {
+    from {
+    background-color: #0079a1;
+    }
+    to {
+    background-color: orange;
+    }
+   }
+
+
+   /* EJEMPLO CON TEXTO */
+
+   .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   .text {
+    font-size: 3em;
+    animation: move 2s infinite;
+    /* es común ver sitios que tienen esta animación de entrada (al cargar el sitio por primera vez) */
+   }
+   
+   @keyframes move {
+    from {
+    transform: translateX(0);
+    }
+    to {
+    transform: translateX(1rem);
+    }
+   }
+
+   /* por capas */
+
+   .por-capas{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   .text-2 {
+    position: absolute;
+    font-size: 48px;
+    animation: moveryrotar 4s ease
+   infinite;
+   }
+
+
+   @keyframes moveryrotar {
+    0% {
+    transform: translateX(0);
+    }
+    25% {
+    transform: translateX(100px);
+    }
+    50% {
+    transform: translateX(0);
+    transform: rotate(180deg)
+   ;
+    } 75% {
+    transform:
+   translateX(-100px);
+    }
+    100% {
+    transform: translateX(0);
+    }
+   }
+
+   /* 0% (Inicio): El elemento comienza en su posición original sin ningún desplazamiento horizontal (translateX(0)).
+25%: El elemento se desplaza 100 píxeles hacia la derecha (translateX(100px)).
+50%: El elemento regresa a su posición original (translateX(0)) y al mismo tiempo rota 180 grados (rotate(180deg)).
+75%: El elemento se desplaza 100 píxeles hacia la izquierda (translateX(-100px)).
+100% (Final): El elemento regresa nuevamente a su posición original (translateX(0)). */

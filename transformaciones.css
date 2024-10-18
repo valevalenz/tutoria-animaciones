@@ -1,0 +1,33 @@
+/* Las transformaciones en CSS se utilizan
+para modificar las propiedades geométricas
+de un elemento, como su tamaño, posición y
+rotación  */
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transform: rotate(45deg) scale(1.5) translate(50px) skew(30deg, 10deg);
+
+    /* scale(1.5) translate(50px) skew(30deg, 10deg) */
+
+   }
+
+/* translate() 
+translateX() 
+translateY()
+scale()
+scaleX()
+scaleY() 
+rotate()
+skew() 
+skewX() 
+skewY() 
+
+transform: matrix(a, b, c, d, e, f) 
+a: scale  X-axis.
+b: Skew Y-axis.
+c: Skew X-axis.
+d: Scale Y-axis.
+e: Translate X-axis.
+f: Translate Y-axis.*/
